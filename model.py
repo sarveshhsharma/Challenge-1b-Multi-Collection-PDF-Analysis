@@ -5,7 +5,7 @@ from datetime import datetime
 
 model = SentenceTransformer('./model/all-MiniLM-L6-v2')
 
-with open('./input/challenge1b_input.json', 'r') as file:
+with open('./input/travel_planner.json', 'r') as file:
     data = json.load(file)
 
 # Extract filenames
@@ -28,7 +28,11 @@ def is_probable_solution(query, solution):
     return similarity
 
 collection = []
+file_names = []
 for pdf_file in filenames:
+    file_names.append({
+        "document":pdf_file
+    })
     pdf_path = "./pdf/"+pdf_file
     threshold = get_fonts_and_sizes(pdf_path)
     results, global_threshold, most_common_font_size, header_lines_greater_than_threshold = solve(pdf_path, threshold)
@@ -199,7 +203,7 @@ for item in collection:
 
 output = {
     "metadata": {
-        "input_documents":list({sec["document"] for sec in extracted_sections}),
+        "input_documents":list({sec["document"] for sec in file_names}),
         "persona": user_persona,
         "job_to_be_done": query,
         "processing_timestamp": datetime.now().isoformat()
