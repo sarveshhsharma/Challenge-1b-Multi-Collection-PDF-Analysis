@@ -2,8 +2,10 @@ from sentence_transformers import SentenceTransformer, util
 from utils import get_fonts_and_sizes, solve
 import json
 from datetime import datetime
+import os
 
 model = SentenceTransformer('./model/all-MiniLM-L6-v2')
+print(f"Processing Started")
 
 with open('./input/travel_planner.json', 'r') as file:
     data = json.load(file)
@@ -210,5 +212,14 @@ output = {
     },
     "extracted_sections": extracted_sections
 }
+# Create the output directory if it doesn't exist
+os.makedirs("output", exist_ok=True)
 
-print(json.dumps(output, indent=4))
+# Define the output file path
+output_path = os.path.join("output", "semantic_output.json")
+
+# Write JSON to file
+with open(output_path, "w", encoding="utf-8") as f:
+    json.dump(output, f, indent=4, ensure_ascii=False)
+
+print(f"Processing Completed")
