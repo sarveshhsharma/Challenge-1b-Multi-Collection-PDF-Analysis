@@ -1,0 +1,50 @@
+{
+    "metadata": {
+        "input_documents": [
+            "Dinner Ideas - Sides_1.pdf",
+            "Dinner Ideas - Sides_2.pdf",
+            "Lunch Ideas.pdf",
+            "Dinner Ideas - Mains_2.pdf",
+            "Dinner Ideas - Mains_3.pdf",
+            "Dinner Ideas - Sides_3.pdf",
+            "Dinner Ideas - Mains_1.pdf",
+            "Dinner Ideas - Sides_4.pdf",
+            "Breakfast Ideas.pdf"
+        ],
+        "persona": "Food Contractor",
+        "job_to_be_done": "Prepare a vegetarian buffet-style dinner menu for a corporate gathering, including gluten-free items.",
+        "processing_timestamp": "2025-07-28T21:25:55.137115"
+    },
+    "extracted_sections": [
+        {
+            "document": "Breakfast Ideas.pdf",
+            "section_title": "Serve immediately. Cottage Cheese and Veggie Bowl Ingredients:",
+            "importance_rank": 1,
+            "page_number": 16
+        },
+        {
+            "document": "Dinner Ideas - Sides_1.pdf",
+            "section_title": "baking dish.",
+            "importance_rank": 2,
+            "page_number": 4
+        },
+        {
+            "document": "Breakfast Ideas.pdf",
+            "section_title": "Serve immediately. Fruit and Nut Bars Ingredients:",
+            "importance_rank": 3,
+            "page_number": 15
+        },
+        {
+            "document": "Breakfast Ideas.pdf",
+            "section_title": "Serve immediately. Veggie Wrap Ingredients:",
+            "importance_rank": 4,
+            "page_number": 13
+        },
+        {
+            "document": "Breakfast Ideas.pdf",
+            "section_title": "Serve immediately. Cottage Cheese and Fruit Ingredients:",
+            "importance_rank": 5,
+            "page_number": 13
+        }
+    ]
+}
